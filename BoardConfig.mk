@@ -31,4 +31,12 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 9000000
 PRESENT_TIME_OFFSET_FROM_VSYNC_NS := 0
 
+# Force Triple Buffering to compensate for legacy Samsung Gralloc drivers
+BOARD_USES_TRIPLE_BUFFERING := true
+TARGET_DISABLE_TRIPLE_BUFFERING := false
+
+# Force SurfaceFlinger alignment without strict sync framework choking
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+TARGET_USES_HWC2 := true
+TARGET_USES_GRALLOC4 := false
 
