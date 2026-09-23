@@ -40,3 +40,6 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_USES_HWC2 := true
 TARGET_USES_GRALLOC4 := false
 
+# Disable UCLAMP to prevent core scheduling desync on older Exynos kernel
+TARGET_SURFACEFLINGER_UCLAMP_BOOST := false
+TARGET_SURFACEFLINGER_CPU_BOOST := true
