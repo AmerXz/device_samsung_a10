@@ -23,3 +23,9 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Disable memory-heavy pinning for 2GB RAM to stop 10-second freezes
+PRODUCT_PRODUCT_PROPERTIES += \
+    runtime.native.pin_camera=false \
+    sys.config.pinner_cmgr=false \
+    sys.config.pinner_webview=false
