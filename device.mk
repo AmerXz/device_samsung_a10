@@ -23,3 +23,16 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Set app compilation mode to speed-profile for system apps
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
+WITH_DEXPREOPT := true
+PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
+
+# Set app compilation mode to speed-profile for user apps
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.first-boot=speed-profile \
+    pm.dexopt.boot=verify \
+    pm.dexopt.install=speed-profile \
+    pm.dexopt.bg-dexopt=speed-profile \
+    pm.dexopt.ab-ota=speed-profile
