@@ -36,3 +36,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.install=speed-profile \
     pm.dexopt.bg-dexopt=speed-profile \
     pm.dexopt.ab-ota=speed-profile
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=0
