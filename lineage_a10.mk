@@ -23,6 +23,3 @@ PRODUCT_NAME := lineage_a10
 PRODUCT_MODEL := SM-A105F
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-
-# Include Private Keys
-include vendor/keys/keys.mk
